@@ -1,2 +1,4 @@
-# Alice is Dreamless
-My attempt at a Yume Nikki fangame with my own style, developed in Godot
+# My Radikal Dreams
+My attempt at a Yume Nikki fangame with my own style and spin, developed in Godot
+
+Currently not in active development
