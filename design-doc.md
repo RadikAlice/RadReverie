@@ -14,3 +14,4 @@
 - Matchstick head
 - Gun
 - Powered wheelchair
+- Grabber tool
