@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dslx258h53i2j"]
+[gd_scene load_steps=3 format=3 uid="uid://dslx258h53i2j"]
 
 [ext_resource type="Texture2D" uid="uid://bmt8gi2uwtcnk" path="res://gfx/splash/icon-godot.svg" id="1_dxqig"]
+[ext_resource type="Script" path="res://scene/fade_to_title.gd" id="2_j6rws"]
 
 [node name="splash" type="CanvasLayer"]
 
@@ -13,7 +14,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Icon-godot" type="Sprite2D" parent="."]
-position = Vector2(421, 324)
+position = Vector2(355, 411)
 texture = ExtResource("1_dxqig")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -30,3 +31,11 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Powered by											Developed by"
 fit_content = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+autostart = true
+script = ExtResource("2_j6rws")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

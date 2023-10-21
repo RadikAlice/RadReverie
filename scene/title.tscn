@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cp84srwgrc3v0" path="res://scene/ui/start.tscn" id="1_ou62w"]
 [ext_resource type="PackedScene" uid="uid://bq3aublifc8vc" path="res://scene/ui/quit.tscn" id="2_2he7r"]
 [ext_resource type="PackedScene" uid="uid://duiby4d7gmq6q" path="res://scene/ui/credits.tscn" id="2_mud8e"]
-[ext_resource type="Script" path="res://scene/viewsplashbtn.gd" id="3_tuo4o"]
+[ext_resource type="PackedScene" uid="uid://bwstpal17okjt" path="res://scene/ui/viewsplash.tscn" id="4_6jof8"]
 
 [node name="title" type="Control"]
 layout_mode = 3
@@ -50,9 +50,11 @@ layout_mode = 2
 [node name="quit" parent="Menu" instance=ExtResource("2_2he7r")]
 layout_mode = 2
 
-[node name="viewsplashbtn" type="Button" parent="Menu"]
+[node name="viewsplashbtn" parent="Menu" instance=ExtResource("4_6jof8")]
 layout_mode = 2
-text = "View Splash Screen"
-script = ExtResource("3_tuo4o")
 
-[connection signal="pressed" from="Menu/viewsplashbtn" to="Menu/viewsplashbtn" method="_on_pressed"]
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+volume_db = -8.0
+bus = &"Music"
+
+[node name="UI" type="AudioStreamPlayer" parent="."]

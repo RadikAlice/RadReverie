@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://e4l5ofsymuax"]
+
+[ext_resource type="Script" path="res://scene/ui/back_to_title.gd" id="1_qnrtf"]
+
+[node name="Back to title" type="Button"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -15.5
+offset_right = 78.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to title screen"
+script = ExtResource("1_qnrtf")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

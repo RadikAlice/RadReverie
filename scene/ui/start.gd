@@ -1,4 +1,4 @@
 extends Button
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scene/lvl/debug.tscn")
+	transition.fade("res://scene/lvl/debug.tscn")
