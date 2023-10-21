@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://duiby4d7gmq6q"]
+
+[ext_resource type="Script" path="res://scene/ui/credits.gd" id="1_vilcg"]
+
+[node name="credits" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Credits"
+script = ExtResource("1_vilcg")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxt6pkjwg3okr"]
+
+[ext_resource type="PackedScene" uid="uid://cp84srwgrc3v0" path="res://scene/ui/start.tscn" id="1_ou62w"]
+[ext_resource type="PackedScene" uid="uid://bq3aublifc8vc" path="res://scene/ui/quit.tscn" id="2_2he7r"]
+[ext_resource type="PackedScene" uid="uid://duiby4d7gmq6q" path="res://scene/ui/credits.tscn" id="2_mud8e"]
+[ext_resource type="Script" path="res://scene/viewsplashbtn.gd" id="3_tuo4o"]
+
+[node name="title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14902, 0, 0.501961, 1)
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -102.0
+offset_right = 23.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="start" parent="Menu" instance=ExtResource("1_ou62w")]
+layout_mode = 2
+
+[node name="credits" parent="Menu" instance=ExtResource("2_mud8e")]
+layout_mode = 2
+
+[node name="quit" parent="Menu" instance=ExtResource("2_2he7r")]
+layout_mode = 2
+
+[node name="viewsplashbtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "View Splash Screen"
+script = ExtResource("3_tuo4o")
+
+[connection signal="pressed" from="Menu/viewsplashbtn" to="Menu/viewsplashbtn" method="_on_pressed"]

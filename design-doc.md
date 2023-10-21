@@ -1,17 +1,35 @@
 # Design document
 
-# Locations
-- Dream Void
-- Wooden Tower
+# Mechanics
+- Sleep
 
-## Worlds
+- Fever Sleep
+
+
+# Locations
+- Room
+- Dream Void
+
+## Dream Locations
 - Old house
+- Dream house, room
+- Passageway to upstairs neighbors
+- Scrapyard
+- Wooden Tower
 - Snowland
-- Metallic wasteland
 
 # Skills
-- Knife
+- Labrys Axe
 - Matchstick head
-- Gun
-- Powered wheelchair
+- Tommy Gun
+- Shopping Cart
 - Grabber tool
+
+# Characters
+
+- Pale bride
+
+# Mini games
+
+## Micro Swing
+- Stripped down port of Power Swing

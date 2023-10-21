@@ -1,0 +1,1 @@
+.dbg files are from Dieback, to create the animated BG loops
